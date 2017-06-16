@@ -10,3 +10,8 @@ Router.map(function() {
 });
 
 export default Router;
+
+// ember/app/router.js
+Router.map(function() {
+  this.route('about');
+});

@@ -19,3 +19,12 @@ test('Should navigate to the About page', function() {
     });
   });
 });
+
+// ember/tests/integration/landing-page-test.js
+test('Should allow navigating back to root from another page', function(assert) {
+  visit('/about').then(function() {
+    click('a:contains("Home")').then(function(assert) {
+      assert.notEqual(find('h3').text(), 'About');
+    });
+  });
+});
